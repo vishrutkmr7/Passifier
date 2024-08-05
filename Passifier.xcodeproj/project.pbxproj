@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +29,31 @@
 		6DE097A62C60AC8F00F709D1 /* PassifierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PassifierUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		6DE097BF2C60B27200F709D1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Pass.swift,
+				PassesGridView.swift,
+				ScannerView.swift,
+				SignInView.swift,
+			);
+			target = 6DE0979B2C60AC8F00F709D1 /* PassifierTests */;
+		};
+		6DE097C02C60B27200F709D1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Pass.swift,
+				PassesGridView.swift,
+				ScannerView.swift,
+				SignInView.swift,
+			);
+			target = 6DE097A52C60AC8F00F709D1 /* PassifierUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		6DE0978E2C60AC8D00F709D1 /* Passifier */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Passifier; sourceTree = "<group>"; };
+		6DE0978E2C60AC8D00F709D1 /* Passifier */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (6DE097BF2C60B27200F709D1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 6DE097C02C60B27200F709D1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Passifier; sourceTree = "<group>"; };
 		6DE0979F2C60AC8F00F709D1 /* PassifierTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = PassifierTests; sourceTree = "<group>"; };
 		6DE097A92C60AC8F00F709D1 /* PassifierUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = PassifierUITests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */

@@ -6,22 +6,16 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct PassesGridView: View {
-    @State private var passes: [Pass] = [] // Fetch from iCloud
+    @Query private var passes: [Pass]
     @State private var showingScanner = false
-    
-    let columns = [GridItem(.adaptive(minimum: 150))]
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(passes) { pass in
-                        PassView(pass: pass)
-                    }
-                }
-                .padding()
+            List(passes) { pass in
+                PassRow(pass: pass)
             }
             .navigationTitle("My Passes")
             .toolbar {
@@ -30,36 +24,28 @@ struct PassesGridView: View {
                         Image(systemName: "plus")
                     }
                 }
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: { /* Open settings */ }) {
-                        Image(systemName: "gear")
-                    }
-                }
+            }
+            .sheet(isPresented: $showingScanner) {
+                ScannerView(onScan: processScannedImage)
             }
         }
-        .sheet(isPresented: $showingScanner) {
-            ScannerView(passes: $passes)
-        }
+    }
+    
+    private func processScannedImage(_ image: UIImage) {
+            // Placeholder for image processing
     }
 }
 
-struct PassView: View {
+struct PassRow: View {
     let pass: Pass
     
     var body: some View {
-        VStack {
+        HStack {
             Image(systemName: "wallet.pass")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 100)
             Text(pass.name)
         }
-        .padding()
-        .background(Color.blue.opacity(0.1))
-        .cornerRadius(10)
     }
 }
-
 
 #Preview {
     PassesGridView()

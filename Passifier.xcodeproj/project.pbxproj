@@ -33,20 +33,26 @@
 		6DE097BF2C60B27200F709D1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				AIUtility.swift,
+				ContentView.swift,
 				Pass.swift,
 				PassesGridView.swift,
+				PassProcessor.swift,
 				ScannerView.swift,
-				SignInView.swift,
+				SplashScreenView.swift,
 			);
 			target = 6DE0979B2C60AC8F00F709D1 /* PassifierTests */;
 		};
 		6DE097C02C60B27200F709D1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				AIUtility.swift,
+				ContentView.swift,
 				Pass.swift,
 				PassesGridView.swift,
+				PassProcessor.swift,
 				ScannerView.swift,
-				SignInView.swift,
+				SplashScreenView.swift,
 			);
 			target = 6DE097A52C60AC8F00F709D1 /* PassifierUITests */;
 		};
@@ -403,6 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Passifier/Passifier.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Passifier/Preview Content\"";
@@ -432,6 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Passifier/Passifier.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Passifier/Preview Content\"";

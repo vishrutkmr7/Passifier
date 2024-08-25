@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct PassifierApp: App {
@@ -13,5 +14,6 @@ struct PassifierApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: Pass.self)
     }
 }
